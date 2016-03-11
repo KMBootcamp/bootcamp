@@ -1,0 +1,6 @@
+<span ng-if="!$ctrl.isYT($ctrl.user.message)">says: {{$ctrl.user.message}}</span>
+<span ng-if="$ctrl.isYT($ctrl.user.message)">posted a YouTube video</span>
+<md-button class="md-raised md-warn"
+           ng-if="$ctrl.isYT($ctrl.user.message)"
+           ng-click="$ctrl.showYT($ctrl.user.message, $ctrl.user.name)">Watch it here!
+</md-button>

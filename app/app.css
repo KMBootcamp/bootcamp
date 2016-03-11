@@ -1,0 +1,39 @@
+#statusForm{
+  padding-left: 15px;
+}
+
+#statusForm input{
+  width: 300px;
+}
+
+#chatArea{
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 430px){
+  #chatArea{
+    width: 430px;
+    overflow-x: hidden;
+  }
+}
+
+md-list-item {
+  transition: background 2s;
+}
+
+md-list-item.recent{
+  background: lightgreen;
+  transition: background 0s;
+}
+
+@-webkit-keyframes wobble  {
+  0%  { -webkit-transform:  rotate(0deg); }
+  20%  { -webkit-transform:  rotate(1deg); }
+  50%  { -webkit-transform:  rotate(-1deg); }
+  100%  { -webkit-transform:  rotate(0deg); }
+}
+.recent { -webkit-animation: wobble 1s; }
+
+.user-link{
+  cursor: pointer;
+}

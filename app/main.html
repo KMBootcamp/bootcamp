@@ -1,0 +1,16 @@
+<article>
+    <md-content>
+        <md-toolbar>
+          <div class='md-toolbar-tools'>
+              <h2>
+                  <span ng-if='!mainCtrl.hasUser()'>Please log in.</span>
+                  <span ng-if="mainCtrl.hasUser()">Logged in as <b>{{mainCtrl.getUserName()}}</b></span>
+              </h2>
+              <span flex></span>
+              <md-button type="button" class='md-raised' ng-if="mainCtrl.hasUser()" ng-click="mainCtrl.logout()">Logout
+              </md-button>
+            </div>
+        </md-toolbar>
+    </md-content>
+    <ui-view></ui-view>
+</article>

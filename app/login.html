@@ -1,0 +1,20 @@
+<article id='guest-space'>
+  <md-content layout='row' layout-padding>
+    <div flex flex-xs='0'></div>
+    <form flex flex-xs='100' name='userForm' ng-submit='loginCtrl.login()'>
+      <div layout='column'>
+        <div layout='column'>
+          <md-input-container>
+            <input type="text" ng-model="loginCtrl.vards" placeholder='Username'><br/>
+          </md-input-container>
+          <md-input-container>
+            <input type="password" placeholder='Password'><br/>
+          </md-input-container>
+          <md-button type='submit'>Login</md-button>
+        </div>
+      </div>
+    </form>
+  <div flex flex-xs='0'></div>
+  </md-content>
+</article>
+<hr/>

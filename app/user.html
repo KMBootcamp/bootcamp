@@ -1,0 +1,32 @@
+<md-content>
+  <md-list>
+      <div id='chatArea' ng-controller='statusController as statusCtrl' style="overflow-y:scroll; max-height: 500px;">
+        <md-list-item class="md-3-line"
+                        ng-class="{recent: statusCtrl.isRecent(user)}"
+                        ng-repeat="user in statusCtrl.users | orderUsers:'statusList' track by user.name">
+              <div class="md-list-item-text" layout="column">
+                    <h3>
+                        [{{user.date | date:'HH:mm:ss'}}]
+                        <span class="user-link"  ng-click="statusCtrl.showHistory(user)">
+                          <b>{{user.name}}</b>
+                        </span>
+                      <mf-status user="user"></mf-status>
+                    </h3>
+
+              </div>
+              <md-divider></md-divider>
+          </md-list-item>
+      </div>
+  </md-list>
+</md-content>
+
+<md-content id='user-space'>
+  <form id='statusForm' name='statusForm' ng-controller='userController as userCtrl' ng-submit='userCtrl.setStatus()' >
+    <md-input-container>
+      <input type='text' ng-model='userCtrl.message' value="Zinja" placeholder='message' >
+    </md-input-container>
+      <md-button type='submit' class='md-raised'>Set status</md-button>
+      <md-button class='md-raised' ng-click='userCtrl.clearStatus()'>Clear status</md-button>
+  </form>
+</md-content>
+<hr/>

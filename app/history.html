@@ -1,0 +1,24 @@
+<md-dialog>
+  <md-toolbar>
+    <div class='md-toolbar-tools'>
+      <h2>{{historyCtrl.username}}</h2>
+      <span flex></span>
+      <md-button ng-click='historyCtrl.refresh()'>Refresh</md-button>
+      <md-button ng-click='historyCtrl.close()'>Go back</md-button>
+    </div>
+  </md-toolbar>
+  <md-content>
+    <p>Total number of posts: {{ historyCtrl.statuses.length }}</p>
+    <md-list>
+      <md-list-item ng-repeat='status in historyCtrl.statuses'>
+        <div class='md-list-item-text' flex layout='row'>
+          <p>
+            <span>{{$index+1}}. </span>
+            [{{ status.date | date:"HH:mm:ss" }}] {{historyCtrl.username}}
+            <mf-status user='status'></mf-status></p>
+          <span flex></span>
+        </div>
+      </md-list-item>
+    </md-list>
+  </md-content>
+</md-dialog>
