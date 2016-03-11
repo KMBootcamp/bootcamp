@@ -1,0 +1,71 @@
+h1, h2, h3, h4, h5, h6{
+  color:red;
+}
+
+#container{
+  float: left;
+  width: 100%;
+}
+
+#center{
+  float:left;
+  width: 50%;
+}
+
+#left{
+  background-color: green;
+  width: 25%;
+  float:left;
+}
+
+#right{
+  background-color: green;
+  width: 25%;
+  float:left;
+}
+
+body{
+  font-family: sans-serif;
+}
+
+table{
+  border: solid 1px;
+}
+
+#center img{
+  width: 450px;
+  height: 250px;
+  text-align: center;
+}
+
+.bilde{
+  width: 350px;
+  height:250px;
+}
+
+#center .bilde:hover{
+  position: relative;
+	-webkit-box-shadow: 0 2px 15px 1px rgba(0, 0, 0, 0.5);
+	-webkit-filter: grayscale(100%);
+}
+
+a:link{
+color:blue;
+}
+a:visited{
+  background:green;
+}
+a:hover{
+  text-decoration: none;
+}
+
+a:active{
+  color:blue;
+}
+
+.block:before{
+  content: "<";
+}
+.block:after{
+  content: " 'data-count' is - " attr(data-count) ">";
+}
